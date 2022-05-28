@@ -1,5 +1,14 @@
-# Título do Projeto
-##  Breve descrição do projeto
+# Faz commit com um comentário prefixado com emoji sequencial
+## Persistência em Sqlite3
+
+Faz commit e rebase em main
+
+Após push cria novo branch com um nome sequencial que fica armazenado no sqlite3
+
+Ex: feat001, Feat002 ...
+
+Cada pasta de projeto é armazenada na base de dados com o número da  commit
+
 
 <br>
   <div align="center">
