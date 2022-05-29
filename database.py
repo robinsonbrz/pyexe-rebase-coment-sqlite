@@ -53,6 +53,9 @@ def insere_pasta_commit(pasta_projeto, numero_feature):
 
 
 def exit_db():
-    cursor.close()
-    connection.close()
+    try:
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e)
     return
