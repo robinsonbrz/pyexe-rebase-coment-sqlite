@@ -24,7 +24,7 @@ def commit_projeto_atual(pasta_projeto):
     try:
         str_query = f'SELECT numero_feature FROM posicao_commit Where pasta_projeto = "{pasta_projeto}";'
         rows = cursor.execute(str_query).fetchall()
-        retorno = rows
+        retorno = rows[0][0]
         if len(rows) == 0:      # caso não tenha nenhum valor é um projeto novo. insere e retorna 1
             insere_pasta_commit(pasta_projeto, 1)
             retorno  = 1
