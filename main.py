@@ -39,8 +39,9 @@ os.system(f"git checkout -b Feat{atual+1}")
 
 
 open_db()
+print("Banco aberto")
 update_projeto_atual(pasta_projeto, atual)
-
+print("Banco atualizado")
 # após fazer o commit incrementar contagem
 # criar update para a pasta atual
 # salva novo numero de feature na base
