@@ -56,6 +56,7 @@ def exit_db():
     try:
         cursor.close()
         connection.close()
+        print("Fechado!")
     except Exception as e:
         print(e)
     return
