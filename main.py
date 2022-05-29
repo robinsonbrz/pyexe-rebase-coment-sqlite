@@ -19,7 +19,16 @@ atual = commit_projeto_atual(pasta_projeto)
 # ler o icone atual
 icone = icone_atual(atual)
 
+atual += 1
+update_projeto_atual(pasta_projeto, atual)
+# após fazer o commit incrementar contagem
+# criar update para a pasta atual
+# salva novo numero de feature na base
+# insere_pasta_commit(pasta_projeto, numero_feature)
+
 exit_db()
+
+
 
 # git add
 os.system("git add .")
@@ -33,18 +42,8 @@ os.system(f"git rebase {nome_branch_atual}")
 # git push
 os.system("git push")
 
-atual += 1
 # git checkout -b <Feat00 numero atual + 1>
-os.system(f"git checkout -b Feat{atual+1}")
+os.system(f"git checkout -b Feat{atual}")
 
 
-open_db()
-print("Banco aberto")
-update_projeto_atual(pasta_projeto, atual)
-print("Banco atualizado")
-# após fazer o commit incrementar contagem
-# criar update para a pasta atual
-# salva novo numero de feature na base
-# insere_pasta_commit(pasta_projeto, numero_feature)
 
-exit_db()
