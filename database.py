@@ -30,8 +30,19 @@ def commit_projeto_atual(pasta_projeto):
             retorno  = 1
     except Exception as e:
         print("Erro na busca de commit")
-        
     return retorno
+
+
+def update_projeto_atual(pasta_projeto, numero_commit_atual):
+    str_query  = f'UPDATE posicao_commit SET numero_feature = {numero_commit_atual} WHERE pasta_projeto = "{pasta_projeto}"' # noqa E501
+    print(str_query)
+    try:
+        cursor.execute(str_query)
+        connection.commit()
+        print('Successfully updated user!')
+    except Exception as e:
+        print(e)
+    return
 
 
 def insere_pasta_commit(pasta_projeto, numero_feature):
@@ -44,5 +55,4 @@ def insere_pasta_commit(pasta_projeto, numero_feature):
 def exit_db():
     cursor.close()
     connection.close()
-    sys.exit()
     return

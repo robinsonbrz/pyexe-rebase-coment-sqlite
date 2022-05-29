@@ -134,3 +134,4 @@ staticfiles/
 
 *.exe
 /utils
+*.db
