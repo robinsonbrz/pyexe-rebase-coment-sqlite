@@ -20,14 +20,13 @@ atual = commit_projeto_atual(pasta_projeto)
 icone = icone_atual(atual)
 
 atual += 1
-update_projeto_atual(pasta_projeto, atual)
 # após fazer o commit incrementar contagem
 # criar update para a pasta atual
 # salva novo numero de feature na base
 # insere_pasta_commit(pasta_projeto, numero_feature)
+update_projeto_atual(pasta_projeto, atual)
 
 exit_db()
-
 
 
 # git add
@@ -44,6 +43,3 @@ os.system("git push")
 
 # git checkout -b <Feat00 numero atual + 1>
 os.system(f"git checkout -b Feat{atual}")
-
-
-
