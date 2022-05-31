@@ -1,5 +1,5 @@
 # Faz commit com um comentário prefixado com emoji sequencial
-## Features sequenciais com persistência em Sqlite3
+## Branch's sequenciais são criadas, sequência armazenada em Sqlite3
 
 <br>
   <div align="center">
@@ -28,27 +28,60 @@
 Visite meu WebSite [https://www.enedino.com.br](https://www.enedino.com.br)
   <br><br><br>
 
+Automatizando o processo de Commit, rebase e push
+
+Criando uma nova branch com numeração sequêncial a cada commit
+
 Faz commit e rebase em main
 
 Após push cria novo branch com um nome sequencial que fica armazenado no sqlite3
 
 Ex: feat001, Feat002 ...
 
-Cada pasta de projeto é armazenada na base de dados com o número do  commit
+Todo projeto está armazenado em uma pasta no computador,
 
-
+o caminho da pasta é a chave primária da base, e é armazenada na base de dados com o número do  commit
+<br><br>
 ## Objetivo:
 
-Lista dos objetivos
+Criar um programa em Python e um executável Windows
 
+que ao ser executado em linha do comando DOS ou PowerShel,
 
+verifica se o projeto já foi armazenado na base de dados, e possui numero de commit
 
-# Próximas features 
+Caso não tenha sido registrado na base, executa esse registro e armazena o número de commit
 
+O programa precisa ser executado na pasta raiz do projeto do Commit
 
+O programa pergunta qual a mensagem de commit, e em seguida efetua o push para o repositório configurado
+<br><br>
 ## Utilização do programa 
 
-<br>
+Depois de criar o executável pyinstaller.
+
+Copiar o executável rob_reb.exe, gerado na pasta Dist para a pasta C:\dist\
+
+Caso deseje mudar a pasta altere o código de database.py mudando a pasta "connection = sqlite3.connect("c:\dist\projetos_e_commits.db")"
+
+É necessário apontar o diretório "c:\dist\" em variáveis do ambiente no windows
+<br><br>
+## Após essas configurações, para efetuar um (commit, rebase e push) do seu projeto.
+
+Dentro da pasta do seu projeto execute:
+
+rob_reb.exe
+
+Em prompt você será perguntado qual o commit atual caso seja a primeira utilização nesta pasta de projeto
+
+e também qual a mensagem do commit deseja utilizar
+
+um commit -m, um rebase e um push serão disparados em seguida
+
+Um novo branch será criado "Feat1" para o primeiro e sempre com um número sequencial a partir dos próximos commit.
+
+Ex: Feat2, Feat3...
+
 _______________________
 
 

@@ -6,8 +6,6 @@ from git_utils import get_branch
 
 # ler a pasta atual
 pasta_atual = os.getcwd()
-print(pasta_atual)
-
 
 open_db()
 
